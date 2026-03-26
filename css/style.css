@@ -1,0 +1,408 @@
+/* 
+   Quora Tech - Minimalismo Corporativo Moderno
+   Design System 2026
+*/
+
+:root {
+    --primary: #0066CC;
+    --primary-dark: #003D7A;
+    --primary-light: #E6F0FF;
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94bold6;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --white: #ffffff;
+    --bg-soft: #F8FAFC;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2.5rem;
+    --shadow-premium: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--white);
+    color: var(--slate-900);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--slate-100);
+    transition: all 0.4s ease;
+}
+
+nav.scrolled {
+    padding: 0.75rem 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.25rem;
+    box-shadow: 0 8px 15px rgba(0, 102, 204, 0.3);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    color: var(--slate-900);
+    letter-spacing: -0.025em;
+}
+
+.logo-text span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: none;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .nav-links { display: flex; }
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--slate-600);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.75rem 1.75rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+}
+
+/* Hero */
+.hero {
+    padding: 12rem 0 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-blob {
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    background: var(--primary-light);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.hero-blob-1 { top: -10rem; right: -10rem; }
+.hero-blob-2 { bottom: -10rem; left: -10rem; }
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 3rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--slate-900);
+}
+
+@media (min-width: 768px) {
+    .hero-title { font-size: 4.5rem; }
+}
+
+.hero-title span {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    font-size: 1.25rem;
+    color: var(--slate-600);
+    max-width: 32rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.btn-outline {
+    border: 2px solid var(--slate-200);
+    color: var(--slate-700);
+    background: transparent;
+    padding: 0.75rem 1.75rem;
+}
+
+.btn-outline:hover {
+    background: var(--slate-50);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--slate-100);
+}
+
+.stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--slate-900);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--slate-500);
+    font-weight: 600;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+}
+
+/* Books */
+.section {
+    padding: 8rem 0;
+}
+
+.bg-soft { background-color: var(--bg-soft); }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-top: 0.75rem;
+}
+
+.divider {
+    width: 4rem;
+    height: 0.3rem;
+    background: var(--primary);
+    margin: 1.5rem auto;
+    border-radius: 1rem;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.book-card {
+    background: var(--white);
+    border-radius: var(--radius-3xl);
+    overflow: hidden;
+    border: 1px solid var(--slate-100);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.08);
+}
+
+.book-img {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.book-card:hover .book-img img {
+    transform: scale(1.1);
+}
+
+.book-tag {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: rgba(255,255,255,0.9);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.book-info {
+    padding: 2.5rem;
+}
+
+.book-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.book-desc {
+    color: var(--slate-500);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    height: 4.5rem;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+.book-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid var(--slate-50);
+}
+
+.book-price {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.buy-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.25rem;
+    background: var(--slate-900);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.book-card:hover .buy-btn {
+    background: var(--primary);
+}
+
+/* Footer & Other sections simplified for briefness in this CSS file, but I will include them */
+.footer {
+    background: var(--slate-900);
+    color: #94a3b8;
+    padding: 6rem 0 3rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer h4, .footer h5 { color: var(--white); }
+.footer ul { list-style: none; margin-top: 1.5rem; }
+.footer li { margin-bottom: 1rem; }
+.footer a { color: inherit; text-decoration: none; transition: color 0.3s; }
+.footer a:hover { color: var(--primary); }
