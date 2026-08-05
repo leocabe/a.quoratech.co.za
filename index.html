@@ -1,160 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quora Tech - Premium Ebooks & Knowledge</title>
-    <meta name="description" content="Explore a world of expert ebooks on technology, innovation, and business. Instant delivery to any device.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="css/style.css">
+
+  <script>
+  window.pixelId = "69f3308425c7d3cc4f8da0a2";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1213905960435896');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1213905960435896&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRANT ASSISTANCE SYSTEM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header-bar {
+      background: linear-gradient(135deg, #b8860b, #d4a017, #ffd700);
+      text-align: center;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(255, 215, 0, 0.4);
+    }
+
+    .header-bar p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a0a00;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-bar span.date {
+      font-weight: 900;
+      color: #6b0000;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 36px 20px 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      line-height: 1.3;
+      color: #ffd700;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      margin-bottom: 12px;
+    }
+
+    .hero p.subtitle {
+      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    /* VIDEO SECTION */
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 0 20px 20px;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), 0 8px 32px rgba(0,0,0,0.6);
+      border: 2px solid rgba(255, 215, 0, 0.25);
+    }
+
+    /* MOBILE: video first fold */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 10px 16px 8px;
+      }
+
+      .hero h1 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+
+      .hero p.subtitle {
+        font-size: 0.78rem;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      .video-wrapper {
+        padding: 0 10px 12px;
+      }
+
+      .header-bar {
+        padding: 9px 12px;
+      }
+
+      .header-bar p {
+        font-size: 0.72rem;
+      }
+    }
+
+    /* VOLUME HINT */
+    .volume-hint {
+      text-align: center;
+      padding: 18px 20px 40px;
+    }
+
+    .volume-hint p {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffd700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(255, 215, 0, 0.08);
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      border-radius: 8px;
+      padding: 12px 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      border-top: 1px solid #1e1e1e;
+      color: #555;
+      font-size: 0.78rem;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">Q</div>
-                <h1 class="logo-text font-poppins">Quora <span>Tech</span></h1>
-            </a>
-            
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#books">Ebooks</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            
-            <a href="#books" class="btn-primary">Explore Collection</a>
-        </div>
-    </nav>
+  <!-- HEADER -->
+  <div class="header-bar">
+    <p>⚠️ WARNING: This page can be blocked at any moment — Don't miss out!</p>
+  </div>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-blob hero-blob-1"></div>
-        <div class="hero-blob hero-blob-2"></div>
-        
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="badge">✦ Knowledge Hub</div>
-                <h2 class="hero-title font-poppins">Explore Knowledge, <span>Transform</span> Your Future</h2>
-                <p class="hero-desc">Discover a world of expert ebooks on technology, innovation, and business. Each page holds lessons that textbooks can't teach. High-quality insights for achievers.</p>
-                
-                <div class="hero-actions">
-                    <a href="#books" class="btn-primary">Get Started Now</a>
-                    <a href="#about" class="btn-primary btn-outline font-poppins">Learn More</a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div>
-                        <span class="stat-num">18+</span>
-                        <span class="stat-label uppercase tracking-widest">Premium Ebooks</span>
-                    </div>
-                    <div>
-                        <span class="stat-num">100%</span>
-                        <span class="stat-label uppercase tracking-widest">Digital Delivery</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <img src="images/hero-ebooks-banner-ZtsBRQRRXArd5YCgcYRw3h.webp" alt="Quora Tech Collection">
-            </div>
-        </div>
-    </header>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>SYSTEM GLITCH EXPOSES BILLIONS THE GOVERNMENT WAS HIDING FROM THE SOUTH AFRICAN PUBLIC</h1>
+  </section>
 
-    <!-- Books Section -->
-    <section id="books" class="section bg-soft">
-        <div class="container">
-            <div class="section-header">
-                <span class="stat-label uppercase tracking-widest" style="color: var(--primary);">Our Collection</span>
-                <h2 class="font-poppins">Featured Ebooks</h2>
-                <div class="divider"></div>
-                <p class="hero-desc" style="margin: 0 auto; line-height: 1.5;">Every book in our collection is drawn from real lives — written to challenge, comfort, and inspire you.</p>
-            </div>
-            
-            <div id="books-grid" class="books-grid">
-                <!-- Books injected via JS -->
-            </div>
-        </div>
-    </section>
+  <!-- VIDEO -->
+  <div class="video-wrapper">
+    <div class="video-container">
+      <vturb-smartplayer id="vid-6a7273c47fb55a1172d6e657" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+        <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div>
+      </vturb-smartplayer> 
+      <script type="text/javascript"> 
+        var s=document.createElement("script"); 
+        s.src="https://scripts.converteai.net/779c895f-0947-4c45-ad11-e7f2e45cc298/players/6a7273c47fb55a1172d6e657/v4/player.js", s.async=!0,document.head.appendChild(s); 
+      </script>
+    </div>
+  </div>
 
-    <!-- Why Choose Us Section -->
-    <section id="about" class="section">
-        <div class="container text-center">
-            <h2 class="font-poppins" style="font-size: 3rem; margin-bottom: 2rem;">Why Quora Tech?</h2>
-            <p class="hero-desc" style="margin: 0 auto 5rem; text-align: center;">Simplicity. Immediacy. Security.</p>
-            
-            <div class="hero-grid" style="gap: 2rem;">
-                <div style="background: var(--bg-soft); padding: 5rem; border-radius: var(--radius-3xl);">
-                    <span style="font-size: 4rem; display: block; margin-bottom: 2rem;">⚡</span>
-                    <h3 class="font-poppins" style="margin-bottom: 1.5rem;">Instant Delivery</h3>
-                    <p class="hero-desc" style="font-size: 1rem;">Your ebook is delivered immediately after purchase — no waiting, no shipping.</p>
-                </div>
-                <div style="background: var(--bg-soft); padding: 5rem; border-radius: var(--radius-3xl);">
-                    <span style="font-size: 4rem; display: block; margin-bottom: 2rem;">📱</span>
-                    <h3 class="font-poppins" style="margin-bottom: 1.5rem;">Read on Any Device</h3>
-                    <p class="hero-desc" style="font-size: 1rem;">Compatible with Kindle, tablets, smartphones, or desktop.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- VOLUME HINT -->
+  <div class="volume-hint">
+    <p>🔊 Turn up the volume!</p>
+  </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-soft">
-        <div class="container text-center">
-            <h2 class="font-poppins">Get in Touch</h2>
-            <div class="divider"></div>
-            <p class="hero-desc" style="margin: 0 auto 3rem;">Have questions? We're here to help.</p>
-            
-            <a href="mailto:ao.trilhadigital@gmail.com" class="font-poppins" style="font-size: 2rem; color: var(--primary); text-decoration: none;">ao.trilhadigital@gmail.com</a>
-        </div>
-    </section>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Elon Musk Fund. All rights reserved.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="logo">
-                        <div class="logo-icon" style="box-shadow: none;">Q</div>
-                        <h1 class="logo-text font-poppins" style="color: white;">Quora <span>Tech</span></h1>
-                    </div>
-                    <p style="margin-top: 2rem; font-size: 0.85rem;">Premium ebooks for knowledge seekers and innovators.</p>
-                </div>
-                
-                <div>
-                    <h5>Navigation</h5>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#books">Ebooks</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 3rem; font-size: 0.8rem;">
-                <p>&copy; 2026 Quora Tech. All rights reserved. Images included.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Main Scripts -->
-    <script src="js/script.js"></script>
 </body>
 </html>
