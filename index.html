@@ -574,22 +574,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 
   <!-- ===== offers ===== -->
   <section class="offers inner" id="planes">
-    <h2 class="section-title dark" style="margin-bottom:28px">ELIGE LA <span class="r">OFERTA IDEAL</span> PARA TI:</h2>
-
-    <div class="plan">
-      <h3>Plan Básico</h3>
-      <ul>
-        <li><span class="mk">✅</span><span>Solo 100 Moldes Básicos Listos y Editables</span></li>
-        <li><span class="mk">✅</span><span>Acceso inmediato</span></li>
-        <li class="off"><span class="mk">🔒</span><span>Sin bonos incluidos</span></li>
-        <li class="off"><span class="mk">🔒</span><span>Sin 1500 Modelos</span></li>
-      </ul>
-      <p class="old">De $47,00</p>
-      <p class="now">$10,00</p>
-      <a class="cta muted" href="https://pay.hotmart.com/Y107362106A?off=gptkzhzs">Quiero solo el básico</a>
-      <p class="warn">⚠️ El 92% de las personas aprovecha la oferta de abajo:</p>
-      <div class="arrow-down">⬇</div>
-    </div>
+    <h2 class="section-title dark" style="margin-bottom:28px">TU <span class="r">OFERTA DE HOY</span>:</h2>
 
     <div class="plan-wrap">
       <span class="tab">🏆 MÁS ELEGIDO</span>
@@ -671,7 +656,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
     </details>
     <details>
       <summary>¿Cómo contacto con el soporte?</summary>
-      <div class="faq-a">Puedes escribirnos en cualquier momento al correo caminhovivamelhor@gmail.com y te ayudamos con lo que necesites.</div>
+      <div class="faq-a">Puedes escribirnos en cualquier momento al correo trilhadigital08@gmail.com y te ayudamos con lo que necesites.</div>
     </details>
   </section>
 
@@ -685,5 +670,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 </div>
 
 <script src="marquee.js" defer></script>
+<script>
+/* Back-redirect: al pulsar "atrás" lleva a la oferta final con más descuento
+   en lugar de abandonar la página. */
+(function () {
+  try {
+    history.pushState(null, document.title, location.href);
+    window.addEventListener("popstate", function () {
+      location.replace("oferta-final.html");
+    });
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
